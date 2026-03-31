@@ -6,4 +6,9 @@ import { Component } from '@angular/core'
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {}
+export class Navbar {
+
+  greet(){
+  console.log('hello world')
+  }
+}
