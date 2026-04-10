@@ -1,13 +1,13 @@
-import { Component, computed, signal } from '@angular/core'
+import { Component } from '@angular/core'
 import { FormsModule } from '@angular/forms';
-import { PromptListComponent } from './prompts/prompt-list/prompt-list.component';
 import { Navbar } from "./navbar/navbar";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [FormsModule, PromptListComponent, Navbar]
+  imports: [FormsModule, Navbar, RouterOutlet]
 })
 export class App {
 
