@@ -70,6 +70,24 @@
       "userId": 3,
       "score": 0,
       "createdAt": "2025-02-01T08:45:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "test",
+      "content": "hello",
+      "categoryId": 1,
+      "userId": 1,
+      "score": 0,
+      "createdAt": "2026-04-14T09:38:12.008Z"
+    },
+    {
+      "id": 7,
+      "title": "sdafsfasdfas",
+      "content": "asdf",
+      "categoryId": -1,
+      "userId": 1,
+      "score": 0,
+      "createdAt": "2026-04-14T09:52:37.562Z"
     }
   ],
   "votes": [

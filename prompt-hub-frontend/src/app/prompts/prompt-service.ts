@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core'
 import { Prompt } from './prompt.model'
 import { HttpClient } from '@angular/common/http'
 import { environment } from '../../environments/environment'
+import { body } from '@primeuix/themes/aura/card'
 
 @Injectable({
   providedIn: 'root',
@@ -13,5 +14,11 @@ export class PromptService {
   getPrompts() {
    return this.httpClient.get<Prompt[]>(this.baseUrl)
   }
+
+
+  createPrompt(prompt: {title: string, content: string, categoryId: number}) {
+    return this.httpClient.post<Prompt>(this.baseUrl, prompt)
+  }
+
 
 }
