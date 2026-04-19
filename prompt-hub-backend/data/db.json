@@ -61,33 +61,6 @@
       "userId": 3,
       "score": 0,
       "createdAt": "2025-01-28T11:00:00.000Z"
-    },
-    {
-      "id": 5,
-      "title": "Commentaire de code expliqué",
-      "content": "Génère un court commentaire (1–2 lignes) en anglais pour une fonction :\n\n- décrire l'intention (what/why), pas le détail d'implémentation\n- style JSDoc ou docstring selon la langue.",
-      "categoryId": 4,
-      "userId": 3,
-      "score": 0,
-      "createdAt": "2025-02-01T08:45:00.000Z"
-    },
-    {
-      "id": 6,
-      "title": "test",
-      "content": "hello",
-      "categoryId": 1,
-      "userId": 1,
-      "score": 0,
-      "createdAt": "2026-04-14T09:38:12.008Z"
-    },
-    {
-      "id": 7,
-      "title": "sdafsfasdfas",
-      "content": "asdf",
-      "categoryId": -1,
-      "userId": 1,
-      "score": 0,
-      "createdAt": "2026-04-14T09:52:37.562Z"
     }
   ],
   "votes": [

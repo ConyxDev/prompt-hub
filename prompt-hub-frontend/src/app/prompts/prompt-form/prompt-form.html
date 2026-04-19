@@ -3,10 +3,12 @@
         <div class="field">
             <label for="title">Title</label> 
             <input formControlName="title" id="title" type="text" pInputText class="w-full">
+            <small class="invalid-feedback">Le titre est requis (max 30 carac.)</small>
         </div>
         <div class="field">
             <label for="content">Content</label> 
             <textarea formControlName="content" id="content" type="text" pTextarea class="w-full"></textarea>
+            <small class="invalid-feedback">Le contenu est requis</small>
         </div>
         <div class="field">
             <label for="category">Category</label> 
@@ -16,10 +18,21 @@
                         optionLabel="name" 
                         [options]="categories()"
                         formControlName="categoryId" /> 
+            <small class="invalid-feedback">La catégorie est requise</small>
+                        
         </div>
         <div class="flex justify-content-end gap-2">
+            @if (promptId()) {
+                <p-button
+                    class="mr-auto"
+                    [outlined]="true"
+                    label="Supprimer"
+                    severity="danger"
+                    (onClick)="deletePrompt()"
+                />
+            }
             <p-button routerLink="/" label="annuler" onclick="submit()"></p-button>
-            <p-button type="submit" label="créer"></p-button>
+            <p-button type="submit" [label]="promptId() ? 'Modifier' : 'Créer' "></p-button>
         </div>
     </form>
 </p-card>

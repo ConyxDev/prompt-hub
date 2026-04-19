@@ -15,10 +15,21 @@ export class PromptService {
    return this.httpClient.get<Prompt[]>(this.baseUrl)
   }
 
+  getPrompt(promptId: number) {
+    return this.httpClient.get<Prompt>(`${this.baseUrl}/${promptId}`)
+   }
+
 
   createPrompt(prompt: {title: string, content: string, categoryId: number}) {
     return this.httpClient.post<Prompt>(this.baseUrl, prompt)
   }
 
+  updatePrompt(promptId: number, prompt: {title: string, content: string, categoryId: number}) {
+    return this.httpClient.put<Prompt>(`${this.baseUrl}/${promptId}`, prompt)
+  }
+
+  deletePrompt(promptId: number) {
+    return this.httpClient.delete<Prompt>(`${this.baseUrl}/${promptId}`)
+  }
 
 }

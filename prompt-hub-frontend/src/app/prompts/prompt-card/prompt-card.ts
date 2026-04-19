@@ -3,10 +3,11 @@ import { Button } from 'primeng/button'
 import { Card } from 'primeng/card'
 import { Tag } from 'primeng/tag'
 import { Prompt } from '../prompt.model'
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-prompt-card',
-  imports: [Button, Card, Tag],
+  imports: [Button, Card, Tag, RouterLink],
   templateUrl: './prompt-card.html',
   styleUrl: './prompt-card.scss',
 })
