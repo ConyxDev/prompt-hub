@@ -5,7 +5,12 @@
             <h1 class="text-2xl font-bold">Prompt Hub</h1>
         </a>
         <div class="flex align-items-center gap-2">
-            <p-button routerLink="/prompts/create" label="Ajouter" icon="pi pi-plus" size="small" />
+            <p-button 
+            severity="secondary"
+            routerLink="/auth" 
+            label="Connexion"  
+            size="small" />
+
             <p-button [icon]="isDarkMode() ? 'pi pi-sun' : 'pi pi-moon'" size="small" (onClick)="toggleDarkMode()" />
         </div>
     </div>
