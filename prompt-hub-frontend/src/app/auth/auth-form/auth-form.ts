@@ -1,10 +1,14 @@
 import { Component, signal } from '@angular/core'
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { required } from '@angular/forms/signals';
+import { required, FormField } from '@angular/forms/signals';
+import { Card } from "primeng/card";
+import { Button } from "primeng/button";
+import { InputText } from "primeng/inputtext";
+import { Password } from 'primeng/password';
 
 @Component({
   selector: 'app-auth-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, Card, Button, InputText, Password],
   templateUrl: './auth-form.html',
   styleUrl: './auth-form.scss',
 })
@@ -28,9 +32,15 @@ export class AuthForm {
   }
 
   submit() {
-    if (this.mode() === 'login') {
 
+    this.form.markAllAsTouched()
+    if (this.form.invalid) return
+
+    const { username, password } = this.form.getRawValue()
+    if (this.mode() === 'login') {
+      this.login(username, password)
     } else {
+      this.register(username, password)
 
     }
   }
@@ -39,7 +49,7 @@ export class AuthForm {
     //this.login()
   }
 
-  register() {
+  register(username: string, password: string) {
     //this.register()
   }
 }
