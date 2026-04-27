@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core'
 import { Router, RouterLink } from '@angular/router'
 import { Button } from 'primeng/button'
+import { AuthService } from '../auth/auth-service'
 @Component({
   selector: 'app-navbar',
   imports: [Button, RouterLink],
@@ -10,6 +11,7 @@ import { Button } from 'primeng/button'
 export class Navbar {
 
   router = inject(Router)
+  authService = inject(AuthService)
 
   isDarkMode = signal<boolean>(false)
 
