@@ -42,6 +42,11 @@
       "id": 5,
       "username": "test",
       "passwordHash": "$2b$10$0MhftVcCwY0Qn9FyLWTzreIurOmoB783a8n4g6fAoEcxsYNfbQTh."
+    },
+    {
+      "id": 6,
+      "username": "testa",
+      "passwordHash": "$2b$10$6Njs3CGtrjHK.78nifz1hux6otKr7I/JAajPOTQq9Kq1VfGRsP32S"
     }
   ],
   "prompts": [

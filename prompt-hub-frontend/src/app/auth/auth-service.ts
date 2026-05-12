@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http'
 import { inject, Injectable, signal } from '@angular/core'
 import { environment } from '../../environments/environment'
 import { CurrentUser } from './current-user.model'
-import { tap } from 'rxjs'
+import { catchError, of, tap } from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +13,18 @@ export class AuthService {
 
   currentUser = signal<CurrentUser | undefined>(undefined)
 
+  loadCurrentUser() {
+    return this.httpClient
+    .get<CurrentUser>(`${this.baseUrl}/me`, {})
+    .pipe(
+      tap(currentUser => this.currentUser.set(currentUser)),
+      catchError(() => {
+        this.currentUser.set(undefined)
+        return of(undefined)
+      })
+    )
+  }
+  
   login(username:string, password: string) {
     return this.httpClient
     .post<CurrentUser>(`${this.baseUrl}/login`, {username, password})
@@ -23,6 +35,12 @@ export class AuthService {
     return this.httpClient
     .post<CurrentUser>(`${this.baseUrl}/register`, {username, password})
     .pipe(tap((currentUser => this.currentUser.set(currentUser))))
+  }
+
+  logOut() {
+    return this.httpClient
+    .post(`${this.baseUrl}/logout`, {})
+    .pipe(tap(() => this.currentUser.set(undefined)))
   }
 
 }

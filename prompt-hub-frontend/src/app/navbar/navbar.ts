@@ -20,4 +20,10 @@ export class Navbar {
     document.documentElement.classList.toggle('app-dark', this.isDarkMode())
   }
 
+  logout() {
+    this.authService.logOut().subscribe(()=> {
+      void this.router.navigate(['/'])
+    })
+  }
+
 }
