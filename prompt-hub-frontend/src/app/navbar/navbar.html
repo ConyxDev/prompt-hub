@@ -23,7 +23,11 @@
                 size="small" />
             }
 
-            <p-button [icon]="isDarkMode() ? 'pi pi-sun' : 'pi pi-moon'" size="small" (onClick)="toggleDarkMode()" />
+            <p-button 
+            [icon]="isDarkMode() ? 'pi pi-sun' : 'pi pi-moon'" 
+            size="small" 
+            (onClick)="isDarkMode.update(value => !value)" 
+            />
         </div>
     </div>
 </header>

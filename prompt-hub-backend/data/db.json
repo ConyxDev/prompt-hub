@@ -56,7 +56,7 @@
       "content": "Écris un post LinkedIn court (150–200 mots) qui :\n\n- commence par une accroche question ou chiffre\n- partage une idée concrète ou une leçon apprise\n- se termine par un call-to-action (question ou invitation à commenter)\n\nTon professionnel mais humain.",
       "categoryId": 2,
       "userId": 2,
-      "score": 1,
+      "score": 2,
       "createdAt": "2025-01-20T14:30:00.000Z"
     },
     {
@@ -65,7 +65,7 @@
       "content": "Rédige une introduction d'article de blog (2–3 paragraphes) optimisée SEO :\n\n- inclure le mot-clé principal dans le premier paragraphe\n- poser le problème du lecteur\n- annoncer ce que l'article va apporter\n\nTon clair et direct.",
       "categoryId": 3,
       "userId": 2,
-      "score": 0,
+      "score": 1,
       "createdAt": "2025-01-25T09:15:00.000Z"
     },
     {
@@ -82,6 +82,16 @@
     {
       "promptId": 2,
       "userId": 2,
+      "type": "up"
+    },
+    {
+      "promptId": 3,
+      "userId": 1,
+      "type": "up"
+    },
+    {
+      "promptId": 2,
+      "userId": 1,
       "type": "up"
     }
   ]
